@@ -1,0 +1,18 @@
+server:
+  port: 18083
+spring:
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: gmall-tx-group
+mybatis-plus:
+  mapper-locations: classpath:mapper/sms/**/*.xml
+  type-aliases-package: com.atguigu.gmall.sms.entity
+  global-config:
+    db-config:
+      id-type: auto
+
+
+feign:
+  sentinel:
+    enabled: true
